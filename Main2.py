@@ -7,12 +7,12 @@ import Adafruit_DHT
 import time
 import datetime
 import sqlite3 as sqlite
-from Led2 import Led
-from Condizionatore2 import Condizionatore
-from Sensore2 import Sensore
-from Database2 import Database
+from Led import Led
+from Condizionatore import Condizionatore
+from Sensore import Sensore
+from Database import Database
 import threading
-import Server2
+import Server
 
 # Setting variabili 
 valoreMax = 27
@@ -34,7 +34,7 @@ condizionatore = Condizionatore(sensore, led, database, valoreMax)
 condizionatore.led.setup()
 
 # Creazione e avvio del thread inerente al server
-server=threading.Thread(target=Server2.avviaServer)
+server=threading.Thread(target=Server.avviaServer)
 server.start()
 
 # Istruzioni inerenti al processo di controllo temperatura
