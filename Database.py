@@ -8,7 +8,7 @@ import RPi.GPIO as GPIO
 import time
 import datetime
 import sqlite3 as sqlite
-import server2
+import server
 
 class Database:
     # Costruttore Database
