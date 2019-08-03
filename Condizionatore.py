@@ -8,9 +8,9 @@ import RPi.GPIO as GPIO
 import time
 import datetime
 import sqlite3 as sqlite
-from Led2 import Led
-from Sensore2 import Sensore
-from Database2 import Database
+from Led import Led
+from Sensore import Sensore
+from Database import Database
 
 class Condizionatore:
     # Costruttore del condizionatore
